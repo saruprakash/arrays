@@ -1,0 +1,146 @@
+Array.Prototype.at()  :-  The at() method takes an integer value and returns the item at the index, allowing for positive and negative integers.
+                          
+Example :- Q. const array1 = [9, 12, 790, 130, 23];
+              let index = 2; 
+              console.log(`Using an index of ${index} the item returned is ${array1.at(index)}`);
+              index = -2;
+              console.log(`Using an index of ${index} item returned is ${array1.at(index)}`);
+           
+           A. Using an index of 2 the item returned is 790
+              Using an index of -2 item returned is 130
+
+Array.prototype.concat()  :- The Concat() method is used to combine two r more strings together.
+ 
+Example : - Q. const array1 = ['apple', 'bat', 'cat'];
+               const array2 = ['doctor', 'elephant', 'fun'];
+               const array3 = array1.concat(array2);
+               console.log(array3);
+   
+            A. Array(6)["apple" , "bat" , "cat" , "doctor" , "elephant" , "fun"]
+
+Array.prototype.copyWithin() :- The copyWithin() methos is will copy array elements to another position in the given array.
+
+
+Example : - Q.  const array1 = ['Saru', 'Saraswathi', 'Pavithra', 'Bala', 'BalaSaraswathi'];
+                console.log(array1.copyWithin(0,2,3));
+
+            A. Array(5)["Pavithra" , "Saraswathi", "Pavithra", "Bala", "BalaSaraswathi"]
+
+   
+
+Array.prototype.entries() :-   The entries() method is will iterate through the Key/value pair.
+
+Example :- Q.  const array = ['z', 'w', 'g'];
+               const iterator = array.entries();
+               console.log(iterator.next().value);
+               console.log(iterator.next().value);
+               console.log(iterator.next().value);
+            A. Array(2)[ 0, "z" ]
+               Array(2)[ 1, "w" ]
+               Array(2)[ 2, "g" ] 
+
+
+
+Array.prototype.every()  :-   The every() methos is returns true r false and even r not.
+
+
+Example :- Q.  function isEven (element, array, index){
+               return element % 2 == 0;
+               }
+               function fun() {
+               var array = [56, 92, 18, 88, 12];
+               var value = array.every(isEven);
+               document.write(value);
+               }
+               fun();
+           A. True
+
+
+Array.prototype.fill()  :- The fill() method is return to fill the give condition.
+
+
+Example  :- Q. const array = [10, 9, 8, 7, 6, 100];
+               console.log(array.fill(0, 1));
+            A. Array(6)[10,0,0,0,0,0]
+
+
+Array.prototype.filter()  :-  The filter() method is will pass the test by a given function.
+
+
+Example :- Q. function canVote(age){
+              return age >= 18;
+              }
+              function func(){
+              var filtered = [15, 63, 16, 34].filter(canVote);
+              document.write(filtered);
+              }
+              func();
+           A. [63, 34]
+
+
+Array.prototype.find()  :- The find() method is used to satisfies the condition to find element.
+
+
+Example  :- Q. var array = [10, 20, 30, 40, 50];
+               var found = array.find(function(element){
+               return element > 30;
+               });
+               document.write(found);      
+           A. 40
+
+
+Array.prototype.findIndex()  :-  The findIndex() method is used to return the index of the first element in the array that satisfies the given condition in the function.
+
+
+Example :- Q. const strings  = [34, 89, 56, 78, 36, 920];
+              const index = strings.findIndex(strings => strings === 36);
+              console.log(index);
+              console.log(strings[index]);
+           A. 4
+             36
+
+
+Array.prototype.flat()  :- The flat() method is used to create new array with all subarrays elements concatenated into an array.
+
+
+Example  :- Q. const arr = [0, 9, [96, 43]];
+               arr.flat();
+               console.log(arr.flat());
+            A. (4)[0,9,96,43]
+
+
+Array.prototype.flatMap() :- The faltMap() methos is used to each element in an array using a mapping function and then flattens the results into a new array.
+
+
+Example  Q.const num = [0, 3, 6];
+           const doubled = num.flatMap(num => {
+           return num === 0 ? [] : [2 * num];
+           });
+           console.log(doubled);
+         A. [6, 12]
+
+
+Array.prototype.forEach()  :-  The foreach() method is calls a each element in an array and its not exicuted empty elements.
+
+Example  Q. const array1 = ["Saraswathi", 23, "#"];
+            array1.forEach(element => console.log(element));
+
+         A.Saraswathi
+           23
+           #
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
